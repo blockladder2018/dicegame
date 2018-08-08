@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 
-import Styles from './HeaderStyles.css';
-
 class Header extends Component {
 
   render() {
     return (
-      <div className={Styles.header}>
+      <div className="header">
         <a href="localhost:8080">Dice Game</a>
-        <hr />
+        <img src="./src/images/flag-usa.png" width="30" />
       </div>
     );
   }

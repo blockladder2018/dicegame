@@ -1,0 +1,91 @@
+#rootContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: #0074D9;
+}
+
+.header {
+  height: 50px;
+  color: white;
+  font-size: 20pt;
+}
+
+.header a {
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+.header a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.header a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.header a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.header a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.footer {
+  height: 50px;
+  color: white;
+  font-size: 12pt;
+  text-align: center;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.game-card-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+  color: white;
+}
+
+.large-button {
+  background-color: #3D9970;
+}

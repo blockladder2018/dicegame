@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Coin flip",
+    "description": "Heads or tails? Fifty-fifty",
+    "icon-url": "./src/images/coin.png"
+  },
+  {
+    "title": "Roll a dice",
+    "description": "Bet on numbers, 1 ot 6",
+    "icon-url": "./src/images/dice.png"
+  },
+  {
+    "title": "Two dice",
+    "description": "Bet on sum, 2 to 12",
+    "icon-url": "./src/images/dices.png"
+  }
+]
