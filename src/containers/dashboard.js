@@ -8,17 +8,20 @@ const Games = [
   {
     "title": "Coin flip",
     "description": "Heads or tails? Fifty-fifty",
-    "icon": "./src/images/coin.png"
+    "icon": "./src/images/coin.png",
+    "link": "/coin-flip"
   },
   {
     "title": "Roll a dice",
     "description": "Bet on numbers, 1 ot 6",
-    "icon": "./src/images/dice.png"
+    "icon": "./src/images/dice.png",
+    "link": "/dice"
   },
   {
     "title": "Two dice",
     "description": "Bet on sum, 2 to 12",
-    "icon": "./src/images/dices.png"
+    "icon": "./src/images/dices.png",
+    "link": "./two-dice"
   }
 ];
 
@@ -43,6 +46,7 @@ class Dashboard extends Component {
         title={game.title}
         description={game.description}
         icon={game.icon}
+        link={game.link}
       />
     );
   }
