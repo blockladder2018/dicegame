@@ -98,3 +98,53 @@
   color: white;
   align-self: center;
 }
+
+.game-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.game-control .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+  font-size: 20px;
+}
+
+.game-control .instruction {
+  color: #DDDDDD;
+}
+
+.game-control .select-coin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.game-control button {
+  background-color: #0074D9;
+  border-width: 0;
+}
+
+.game-control button:focus {
+  outline: 0;
+}
+
+.grey-image {
+  opacity: 0.2;
+}
+
+.game-control .bet-rate-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.game-control .bet-rate-button {
+  background-color: navy;
+  color: white;
+  margin-right: 10px;
+}
