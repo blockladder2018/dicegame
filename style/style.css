@@ -115,6 +115,7 @@
 
 .game-control .instruction {
   color: #DDDDDD;
+  text-align: center;
 }
 
 .game-control .select-coin {
@@ -147,4 +148,26 @@
   background-color: navy;
   color: white;
   margin-right: 10px;
+}
+
+.game-control .bet-rate-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.game-control .text {
+  color: white;
+  font-size: 30px;
+}
+
+.game-control input {
+  background-color: #0074D9;
+  color: white;
+  border-width: 2px;
+  border-color: white;
+  text-align: center;
+  border-style: solid;
 }

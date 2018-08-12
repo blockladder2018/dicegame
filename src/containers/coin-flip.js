@@ -11,15 +11,22 @@ import GameHistory from '../components/game-history';
 class CoinFlip extends Component {
 
   render () {
+    const {
+      coinSideChosen,
+      betRate,
+      setCoinSideChosen,
+      setBetRate,
+    } = this.props;
+
     return (
       <div id="rootContainer">
         <Header />
         <div className="game-section">
           <GameControl
-            coinSideChosen={this.props.coinSideChosen}
-            betRate={this.props.betRate}
-            setCoinSideChosen={this.props.setCoinSideChosen}
-            setBetRate={this.props.setBetRate}
+            coinSideChosen={coinSideChosen}
+            betRate={betRate}
+            setCoinSideChosen={setCoinSideChosen}
+            setBetRate={setBetRate}
           />
           <GameParameter
             winningChance='50'

@@ -1,5 +1,26 @@
 import React from 'react';
 
+import ButtonSmall from './button-small';
+
+const BET_RATES = [
+  {
+    "text": "0.05",
+    "value": 0.05
+  },
+  {
+    "text": "0.10",
+    "value": 0.10
+  },
+  {
+    "text": "0.15",
+    "value": 0.15
+  },
+  {
+    "text": "max",
+    "value": 2.04
+  }
+];
+
 const GameControl = (props) => {
 
   const {
@@ -39,31 +60,45 @@ const GameControl = (props) => {
       </div>
 
       <div className="bet-rate-buttons">
-        <button
-          className="btn bet-rate-button"
-          onClick={() => console.log("set bet rate")}
-        >
-          <p>0.05</p>
-        </button>
-        <button
-          className="btn bet-rate-button"
-          onClick={() => console.log("set bet rate")}
-        >
-          <p>0.10</p>
-        </button>
-        <button
-          className="btn bet-rate-button"
-          onClick={() => console.log("set bet rate")}
-        >
-          <p>0.15</p>
-        </button>
+        {
+          BET_RATES.map(rate =>
+            <ButtonSmall
+              key={rate.value}
+              text={rate.text}
+              value={rate.value}
+              onClick={() => setBetRate(rate.value)}
+            />
+          )
+        }
       </div>
 
       <div className="bet-rate-input">
-        <input value={betRate} />
-        <p>Your bet</p>
+        <button
+          onClick={() => {
+            const newBetRate = betRate - 0.01;
+            if (newBetRate > 0 && newBetRate < 2.05) {
+              setBetRate(newBetRate);
+            }
+          }}
+        >
+          <p className="text">-</p>
+        </button>
+        <input readOnly value={parseFloat(betRate).toFixed(2)} />
+        <button
+          onClick={() => {
+            const newBetRate = betRate + 0.01;
+            if (newBetRate > 0 && newBetRate < 2.05) {
+              setBetRate(newBetRate);
+            }
+          }}
+        >
+          <p className="text">+</p>
+        </button>
       </div>
 
+      <div className="instruction">
+        <p>Your bet</p>
+      </div>
     </div>
   );
 };
