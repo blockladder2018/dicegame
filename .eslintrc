@@ -1,0 +1,10 @@
+{
+  parser: "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "quotes": [2, "double", "avoid-escape"],
+    "indent": ["error", 2, { "VariableDeclarator": 1 }]
+  }
+}

@@ -1,17 +1,17 @@
-import { createActions, createReducer}  from 'reduxsauce';
-import Immutable from 'seamless-immutable';
-import store from '../redux';
+import { createActions, createReducer}  from "reduxsauce";
+import Immutable from "seamless-immutable";
+import store from "../redux";
 
 /* ------------- Initial State ------------- */
 export const INITIAL_STATE = Immutable({
-  coinSideChosen: 'front', // Options: 'front', 'back'
+  coinSideChosen: "front", // Options: 'front', 'back'
   betRate: 0.10,  // range: [0.05, 2.04]
 });
 
 /* ------------- Types and Action Creators ------------- */
 const { Types, Creators } = createActions({
-  setCoinSideChosen: ['coinSideChosen'],
-  setBetRate: ['betRate'],
+  setCoinSideChosen: ["coinSideChosen"],
+  setBetRate: ["betRate"],
   clear: null,
 });
 

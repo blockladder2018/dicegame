@@ -1,32 +1,79 @@
+const path = require("path");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+
 module.exports = {
-  entry: ['./src/index.js'],
-  output: {
-    path: __dirname,
-    publicPath: '/',
-    filename: 'bundle.js'
-  },
-  debug: true,
-  devtool: "#eval-source-map",
   module: {
-    loaders: [
+    rules: [
       {
+        test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          presets: ['react', 'es2015', 'stage-1']
-        }
-      }
+        use: [
+          "babel-loader",
+          "eslint-loader"
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "postcss-loader"
+        ]
+      },
+      {
+        test: /\.less$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "postcss-loader",
+          "less-loader"
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "postcss-loader",
+          "sass-loader"
+        ]
+      },
+      {
+        test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2|ttf|eot)$/,
+        loader: "file-loader"
+      },
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    alias: {
+      components: path.resolve(__dirname, "src/components/"),
+      static: path.resolve(__dirname, "src/static/"),
+      theme: path.resolve(__dirname, "src/theme/"),
+    },
+    extensions: [
+      ".js",
+      ".jsx"
+    ],
+    modules: [
+      path.resolve(__dirname, "src/"),
+      path.resolve(__dirname, "node_modules/"),
+    ]
   },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './',
-    watchOptions: {
-      aggregateTimeout: 300,
-      poll: 1000
+  optimization: {
+    splitChunks: {
+      chunks: "all"
     }
+  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: path.resolve(__dirname, "src/index.html"),
+      filename: "./index.html"
+    })
+  ],
+  devServer: {
+    compress: true,
+  },
+  watchOptions: {
+    poll: 1000
   }
 };

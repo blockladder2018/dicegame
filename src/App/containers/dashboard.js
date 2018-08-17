@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Header from '../components/header';
-import Footer from '../components/footer';
-import GameCard from '../components/game-card';
+import Header from "../components/header";
+import Footer from "../components/footer";
+import GameCard from "../components/game-card";
 
 const Games = [
   {

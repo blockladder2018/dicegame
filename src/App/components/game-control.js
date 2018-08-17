@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import ButtonSmall from './button-small';
+import ButtonSmall from "./button-small";
 
 const BET_RATES = [
   {
@@ -41,17 +41,17 @@ const GameControl = (props) => {
       <div className="select-coin">
         <button
           onClick={() => {
-            setCoinSideChosen('front');
+            setCoinSideChosen("front");
           }}
         >
-          <img className={coinSideChosen === 'front' ? "" : "grey-image"} src="./src/images/coin-front.png" width="50" height="50" />
+          <img className={coinSideChosen === "front" ? "" : "grey-image"} src="./src/images/coin-front.png" width="50" height="50" />
         </button>
         <button
           onClick={() => {
-            setCoinSideChosen('back');
+            setCoinSideChosen("back");
           }}
         >
-          <img className={coinSideChosen === 'back' ? "" : "grey-image"} src="./src/images/coin-back.png" width="50" height="50" />
+          <img className={coinSideChosen === "back" ? "" : "grey-image"} src="./src/images/coin-back.png" width="50" height="50" />
         </button>
       </div>
 
