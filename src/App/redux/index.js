@@ -1,14 +1,14 @@
-import { combineReducers } from "redux";
-import configureStore from "./create-store";
+import { createStore, combineReducers } from "redux";
 
-const createStore = () => {
-  const rootReducer = combineReducers({
-    coinFlip: require("./reducer-coin-flip").reducer,
-  });
+import ApplicationStore from "./ApplicationStore";
+import CoinFlipStore from "./CoinFlipStore";
 
-  return configureStore(rootReducer);
-};
+import { reducer as forms } from "redux-form";
 
-const store = createStore();
+const singletonStore = createStore(combineReducers({
+  application: ApplicationStore.reducer,
+  coinFlip: CoinFlipStore.reducer,
+  forms: forms,
+}), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-export default store;
+export default singletonStore;

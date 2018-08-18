@@ -4,10 +4,14 @@ import { Provider } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import store from "./App/Redux";
-import Dashboard from "./App/containers/dashboard";
-import CoinFlip from "./App/containers/coin-flip";
-import Dice from "./App/containers/dice";
-import TwoDice from "./App/containers/two-dice";
+import {
+  Dashboard,
+  CoinFlip,
+  Dice,
+  TwoDice,
+} from "App/container";
+
+import "./styles.scss";
 
 class App extends Component {
   render() {

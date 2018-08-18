@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "antd";
 import { Link } from "react-router-dom";
 
 const GameCard = ({title, description, icon, link}) => {
@@ -8,12 +9,13 @@ const GameCard = ({title, description, icon, link}) => {
       <h4>{title}</h4>
       <p>{description}</p>
       <Link to={link}>
-        <button
-          className="btn large-button"
+        <Button
+          type="primary"
+          size="large"
           onClick={() => console.log("button clicked")}
         >
-          <p className="button-text">Play now</p>
-        </button>
+          Play
+        </Button>
       </Link>
     </div>
   );

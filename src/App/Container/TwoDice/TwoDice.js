@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 
-import Header from "../components/header";
-import Footer from "../components/footer";
+import {
+  Header,
+  Footer
+} from "App/Component";
 
-class Dice extends Component {
+class TwoDice extends Component {
 
   render () {
     return (
       <div id="rootContainer">
         <Header />
         <div>
-          Dice
+          Two Dice
         </div>
         <Footer />
       </div>
@@ -18,4 +20,4 @@ class Dice extends Component {
   }
 };
 
-export default Dice;
+export default TwoDice;

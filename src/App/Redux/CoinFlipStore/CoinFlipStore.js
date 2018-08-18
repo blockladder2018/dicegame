@@ -1,6 +1,5 @@
 import { createActions, createReducer}  from "reduxsauce";
 import Immutable from "seamless-immutable";
-import store from "../redux";
 
 /* ------------- Initial State ------------- */
 export const INITIAL_STATE = Immutable({
@@ -15,22 +14,25 @@ const { Types, Creators } = createActions({
   clear: null,
 });
 
-export default Creators;
-
 /* ------------- Reducers ------------- */
-export const setCoinSideChosenReducer = (state = INITIAL_STATE, { coinSideChosen }) => {
+const setCoinSideChosenReducer = (state = INITIAL_STATE, { coinSideChosen }) => {
   return state.merge({ coinSideChosen});
 };
 
-export const setBetRateReducer = (state = INITIAL_STATE, { betRate }) => {
+const setBetRateReducer = (state = INITIAL_STATE, { betRate }) => {
   return state.merge({ betRate });
 };
 
-export const clearReducer = () => INITIAL_STATE;
+const clearReducer = () => INITIAL_STATE;
 
 /* ------------- Hookup Reducers To Types ------------- */
-export const reducer = createReducer(INITIAL_STATE, {
+const reducer = createReducer(INITIAL_STATE, {
   [Types.SET_COIN_SIDE_CHOSEN]: setCoinSideChosenReducer,
   [Types.SET_BET_RATE]: setBetRateReducer,
   [Types.CLEAR]: clearReducer,
 });
+
+export default {
+  action: Creators,
+  reducer: reducer,
+}

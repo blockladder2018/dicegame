@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import { Layout, Divider } from "antd";
 
-import Header from "../components/header";
-import Footer from "../components/footer";
-import GameCard from "../components/game-card";
+// import Header from "../components/header";
+// import Footer from "../components/footer";
+// import GameCard from "../components/game-card";
 
 const Games = [
   {
@@ -28,14 +29,14 @@ const Games = [
 class Dashboard extends Component {
 
   render () {
+    const { Header, Footer, Content } = Layout;
+
     return (
-      <div id="rootContainer">
-        <Header />
-        <div className="game-card-list">
-          {this.renderGameCards()}
-        </div>
-        <Footer />
-      </div>
+      <Layout>
+        <Header>Header</Header>
+        <Content>Content</Content>
+        <Footer>Footer</Footer>
+      </Layout>
     );
   }
 

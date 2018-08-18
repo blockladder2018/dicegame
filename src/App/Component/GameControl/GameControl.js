@@ -1,6 +1,5 @@
 import React from "react";
-
-import ButtonSmall from "./button-small";
+import Button from "antd";
 
 const BET_RATES = [
   {
@@ -62,7 +61,7 @@ const GameControl = (props) => {
       <div className="bet-rate-buttons">
         {
           BET_RATES.map(rate =>
-            <ButtonSmall
+            <Button
               key={rate.value}
               text={rate.text}
               value={rate.value}
