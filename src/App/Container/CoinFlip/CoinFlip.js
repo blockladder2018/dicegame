@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import { Layout, Divider } from "antd";
 import { connect } from "react-redux";
 
-import CoinFlipStore from "App/Redux/CoinFlipStore";
+import "./CoinFlipStyles.less";
+import { CoinFlipController } from "App/Controller";
 import {
   Head,
   Foot,
@@ -13,31 +15,32 @@ import {
 class CoinFlip extends Component {
 
   render () {
-    const {
-      coinSideChosen,
-      betRate,
-      setCoinSideChosen,
-      setBetRate,
-    } = this.props;
+    const { Header, Footer, Content } = Layout;
+    const { coinSideChosen, betRate } = this.props;
 
     return (
-      <div id="rootContainer">
-        <Head />
-        <div className="game-section">
+      <Layout className="coin-flip">
+        <Header className="header">
+          <Head />
+        </Header>
+        <Divider />
+        <Content className="content">
           <GameControl
             coinSideChosen={coinSideChosen}
             betRate={betRate}
-            setCoinSideChosen={setCoinSideChosen}
-            setBetRate={setBetRate}
+            setCoinSideChosen={CoinFlipController.setCoinSideChosen}
+            setBetRate={CoinFlipController.setBetRate}
           />
           <GameParameter
             winningChance='50'
             winningBetRate='1.96'
           />
-          <GameHistory />
-        </div>
-        <Foot />
-      </div>
+        </Content>
+        <Divider />
+        <Footer className="footer">
+          <Foot />
+        </Footer>
+      </Layout>
     );
   }
 };
@@ -49,15 +52,4 @@ const mapStateToProps = ({ coinFlip }) => {
   }
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setCoinSideChosen: (coinSideChosen) => {
-      dispatch(CoinFlipRedux.setCoinSideChosen(coinSideChosen));
-    },
-    setBetRate: (betRate) => {
-      dispatch(CoinFlipRedux.setBetRate(betRate));
-    }
-  }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(CoinFlip);
+export default connect(mapStateToProps)(CoinFlip);

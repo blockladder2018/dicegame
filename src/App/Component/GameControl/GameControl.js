@@ -1,5 +1,8 @@
 import React from "react";
-import { Button } from "antd";
+import { Button, InputNumber } from "antd";
+
+import "./GameControlStyles.less";
+import I18n, { keys as k } from "App/I18n";
 
 const BET_RATES = [
   {
@@ -20,6 +23,10 @@ const BET_RATES = [
   }
 ];
 
+const onChange = (e) => {
+  console.log(`radio checked: ${e.target.value}`);
+}
+
 const GameControl = (props) => {
 
   const {
@@ -31,72 +38,50 @@ const GameControl = (props) => {
 
   return (
     <div className="game-control">
-
-      <div className="title">
-        <img src="./src/images/coin.png" width="40" height="40" />
-        <p>Coin Flip</p>
+      <div className="title-section">
+        <img className="icon" src="./src/App/Images/coin-light.png" />
+        <h2 className="title-text">{I18n.t(k.L_Coin_flip)}</h2>
+      </div>
+      <div className="select-coin-section">
+        <div className="two-coins">
+          <button className="coin-button" onClick={() => {setCoinSideChosen("front")}}>
+            <img className={coinSideChosen === "front" ? "" : "grey-image"} src="./src/App/Images/coin-head.png" width="50" height="50" />
+          </button>
+          <button className="coin-button" onClick={() => {setCoinSideChosen("back")}}>
+            <img className={coinSideChosen === "back" ? "" : "grey-image"} src="./src/App/Images/coin-tail.png" width="50" height="50" />
+          </button>
+        </div>
+        <p>{I18n.t(k.L_Choose_coin_to_bet_on)}</p>
       </div>
 
-      <div className="select-coin">
-        <button
-          onClick={() => {
-            setCoinSideChosen("front");
-          }}
-        >
-          <img className={coinSideChosen === "front" ? "" : "grey-image"} src="./src/images/coin-front.png" width="50" height="50" />
-        </button>
-        <button
-          onClick={() => {
-            setCoinSideChosen("back");
-          }}
-        >
-          <img className={coinSideChosen === "back" ? "" : "grey-image"} src="./src/images/coin-back.png" width="50" height="50" />
-        </button>
-      </div>
-
-      <div className="instruction">
-        <p>Choose coin to bet on</p>
-      </div>
-
-      <div className="bet-rate-buttons">
-        {
-          BET_RATES.map(rate =>
-            <Button
-              key={rate.value}
-              text={rate.text}
-              value={rate.value}
-              onClick={() => setBetRate(rate.value)}
-            />
-          )
-        }
-      </div>
-
-      <div className="bet-rate-input">
-        <button
-          onClick={() => {
-            const newBetRate = betRate - 0.01;
-            if (newBetRate > 0 && newBetRate < 2.05) {
-              setBetRate(newBetRate);
-            }
-          }}
-        >
-          <p className="text">-</p>
-        </button>
-        <input readOnly value={parseFloat(betRate).toFixed(2)} />
-        <button
-          onClick={() => {
-            const newBetRate = betRate + 0.01;
-            if (newBetRate > 0 && newBetRate < 2.05) {
-              setBetRate(newBetRate);
-            }
-          }}
-        >
-          <p className="text">+</p>
-        </button>
-      </div>
-
-      <div className="instruction">
-        <p>Your bet</p>
+      <div className="bet-rate-section">
+        <div className="bet-rate-button-section">
+          {
+            BET_RATES.map(rate =>
+              <Button
+                key={rate.value}
+                className="small-button"
+                type="primary"
+                size="small"
+                onClick={() => setBetRate(rate.value)}
+              >
+                {rate.text}
+              </Button>
+            )
+          }
+        </div>
+        <div className="bet-rate-input-section">
+          <InputNumber
+            min={0.01}
+            max={2.04}
+            size="large"
+            value={betRate}
+            precision={2}
+            onChange={(newValue) => setBetRate(newValue)}
+            step={0.01}
+          />
+        </div>
+        <p className="instruction-text">{I18n.t(k.L_Your_bet)}</p>
       </div>
     </div>
   );

@@ -14,4 +14,9 @@ export default {
   L_Two_dice_winning_pay: "获胜就能赢得高达{0}倍的投注",
 
   L_Play: "开始游戏",
+
+  L_Choose_coin_to_bet_on: "选择硬币的一面来进行投注",
+
+  L_Your_bet: "您的赌注",
+
 };

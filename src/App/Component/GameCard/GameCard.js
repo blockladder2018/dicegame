@@ -12,7 +12,7 @@ const GameCard = ({title, intro, winningPay, icon, link}) => {
       <h2 className="title">{title}</h2>
       <p>{intro}</p>
       <p>{winningPay}</p>
-      <Link class="button-section" to={link}>
+      <Link className="button-section" to={link}>
         <Button
           type="primary"
           size="large"

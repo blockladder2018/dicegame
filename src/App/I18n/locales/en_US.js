@@ -14,4 +14,8 @@ export default {
   L_Two_dice_winning_pay: "Winning bet pays up to {0}x",
 
   L_Play: "Play",
+
+  L_Choose_coin_to_bet_on: "Choose coin to bet on",
+  L_Your_bet: "Your bet",
+
 };
