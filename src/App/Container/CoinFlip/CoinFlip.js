@@ -32,8 +32,10 @@ class CoinFlip extends Component {
             setBetRate={CoinFlipController.setBetRate}
           />
           <GameParameter
-            winningChance='50'
-            winningBetRate='1.96'
+            winningChance={50}
+            winningBetRate={1.96}
+            totalInJackpot={3.992}
+            betRate={betRate}
           />
         </Content>
         <Divider />

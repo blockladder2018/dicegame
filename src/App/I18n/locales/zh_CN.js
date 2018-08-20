@@ -18,5 +18,12 @@ export default {
   L_Choose_coin_to_bet_on: "选择硬币的一面来进行投注",
 
   L_Your_bet: "您的赌注",
+  L_Winning_chance: "获胜机会",
+  L_Winning_bet_pays: "赢得投注",
+  L_You_will_win: "您将赢得{0}以太币",
+  L_Fee_to_jackpot: "{0}%费用，{1}以太币积累大奖",
+  L_Jackpot_contains: "大奖包括",
+  L_Currency_ETH: "以太币",
+  L_Jackpot_chance: "{0}%的赢大奖机会！",
 
 };
