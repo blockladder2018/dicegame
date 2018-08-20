@@ -10,10 +10,14 @@ import {
   Dice,
   TwoDice,
 } from "App/container";
-
-import "./styles.scss";
+import { ApplicationController } from "./App/Controller";
 
 class App extends Component {
+
+  componentWillMount() {
+    ApplicationController.setLocale("zh");
+  }
+
   render() {
     return (
       <BrowserRouter>

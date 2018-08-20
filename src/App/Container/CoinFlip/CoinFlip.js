@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 
 import CoinFlipStore from "App/Redux/CoinFlipStore";
 import {
-  Header,
-  Footer,
+  Head,
+  Foot,
   GameControl,
   GameParameter,
   GameHistory,
@@ -22,7 +22,7 @@ class CoinFlip extends Component {
 
     return (
       <div id="rootContainer">
-        <Header />
+        <Head />
         <div className="game-section">
           <GameControl
             coinSideChosen={coinSideChosen}
@@ -36,7 +36,7 @@ class CoinFlip extends Component {
           />
           <GameHistory />
         </div>
-        <Footer />
+        <Foot />
       </div>
     );
   }

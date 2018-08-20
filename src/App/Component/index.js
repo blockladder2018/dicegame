@@ -1,15 +1,15 @@
-import Footer from "./Footer";
+import Foot from "./Foot";
 import GameCard from "./GameCard";
 import GameControl from "./GameControl";
 import GameHistory from "./GameHistory";
 import GameParameter from "./GameParameter";
-import Header from "./Header";
+import Head from "./Head";
 
 export {
-  Footer,
+  Foot,
   GameCard,
   GameControl,
   GameHistory,
   GameParameter,
-  Header,
+  Head,
 };
