@@ -37,6 +37,7 @@ class CoinFlip extends Component {
             totalInJackpot={3.992}
             betRate={betRate}
           />
+          <GameHistory />
         </Content>
         <Divider />
         <Footer className="footer">

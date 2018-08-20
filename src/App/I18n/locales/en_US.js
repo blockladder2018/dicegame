@@ -24,5 +24,11 @@ export default {
   L_Jackpot_contains: "Jackpot contains",
   L_Currency_ETH: "ETH",
   L_Jackpot_chance: "{0}% jackpot chance!",
-  
+
+  L_Game_history: "Game history",
+  L_Player: "Player",
+  L_Bet: "Bet",
+  L_Result: "Result",
+  L_Only_me: "Only me",
+
 };

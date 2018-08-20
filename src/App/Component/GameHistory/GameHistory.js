@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+import "./GameHistoryStyles.less";
+import I18n, { keys as k } from "App/I18n";
+
 class GameHistory extends Component {
 
   componentWillMount() {
@@ -55,102 +58,6 @@ class GameHistory extends Component {
               "bet_block_hash": "0x9966dc66995927241830a790105f386e3a2d760b8ea1b591dcd1e6f222735e9b",
               "bet_block_number": 6150480,
               "reveal_block_hash": "0x7b7d641fb72af3b7b24e879e37e40ac60337ab8835bd45bc5496d2dcf2e0e6e3"
-            },
-            {
-              "id": 56971,
-              "tx_hash": "0x73493e9719ce0b78c9fbaeb75bdb6b1f1caab73cdb82c774750c74c633788476",
-              "address_from": "0xd1eb49fa03f2a96b642eb9b821345f11879a4f95",
-              "modulo": 2,
-              "commit": "0x3b4e023fd6421be68c95decfeb34ae10df8a29ad7c06296b8baf7d1dd9e3a0a7",
-              "reveal": "0x1b5f5ff06f845b173431d6dcc49409c8b866f60155b2fd4033b800a2359cb713",
-              "bet_mask": "2",
-              "amount": "600000000000000000",
-              "reveal_tx_hash": "0x24c5f382929d675d0b52c699676e98e8c23345d4bf3d263af54377585ea42d5f",
-              "dice_payment": "1186000000000000000",
-              "jackpot_payment": "0",
-              "bet_block_hash": "0x5b9aba5bdd397d6afc2bc04615326c6a02adbf6930b66e285d908cf1c77b04fd",
-              "bet_block_number": 6150477,
-              "reveal_block_hash": "0x72f673b5e7609cc6cde845b5afcb274492065d53f1d91182f3f90f78558a9a94"
-            },
-            {
-              "id": 56969,
-              "tx_hash": "0x537d9defe375d99a59ce220f7204e1c645134296bfb085fc55cace0958337328",
-              "address_from": "0x702df44ee0baff50f8906fd766d038d74df98769",
-              "modulo": 2,
-              "commit": "0x7b30e0b1315616cd61ae09bf9e12a3245c07209df17fc8ae44d56447ffb5fda4",
-              "reveal": "0x9843c390353673175af9df852ec61c548328d68eef5562896145459be67c3d90",
-              "bet_mask": "1",
-              "amount": "20000000000000000",
-              "reveal_tx_hash": "0x99ccdd6cc8ae73c908f80e72fb340a2614adfd118fcde1a589fd80ca3b6d5b24",
-              "dice_payment": "39400000000000000",
-              "jackpot_payment": "0",
-              "bet_block_hash": "0x5b9aba5bdd397d6afc2bc04615326c6a02adbf6930b66e285d908cf1c77b04fd",
-              "bet_block_number": 6150477,
-              "reveal_block_hash": "0xd93d55bc0db45dd1fffe654f6d8da65a13e5e94998e9ba36342786b87e20dcf1"
-            },
-            {
-              "id": 56968,
-              "tx_hash": "0x4196c1a1dfd98cd2eaa01698eee7cef8f0c86fcde2865d6e4b89789175429309",
-              "address_from": "0xd1eb49fa03f2a96b642eb9b821345f11879a4f95",
-              "modulo": 2,
-              "commit": "0x1bd0c36ffecff31074ef9f9d2a28db330fc213dd43c00f9d5b8db339b4d61434",
-              "reveal": "0xdcc2fe55d921983f2bc94a2e8effd961a83bcaac953cfcd8e39870863e106549",
-              "bet_mask": "2",
-              "amount": "400000000000000000",
-              "reveal_tx_hash": "0xaf66c51a26c58a25c09945beef50cf7ed3b5d268af418fe880eb571d6e4852b9",
-              "dice_payment": "790000000000000000",
-              "jackpot_payment": "0",
-              "bet_block_hash": "0xca79e81c275796c891441f90b508714932663e8db93391c84cd084d634e7cfce",
-              "bet_block_number": 6150474,
-              "reveal_block_hash": "0x5b9aba5bdd397d6afc2bc04615326c6a02adbf6930b66e285d908cf1c77b04fd"
-            },
-            {
-              "id": 56967,
-              "tx_hash": "0x67ba870c154d1bb8c64ffc09b5726e68ca5338be664be1cc11cbe9cffb91aeef",
-              "address_from": "0x702df44ee0baff50f8906fd766d038d74df98769",
-              "modulo": 2,
-              "commit": "0xa135bffbb75f9966dc6cd6253749a63d847bfbd528d9fb8478e9308a617f6c26",
-              "reveal": "0xe887f5e63bc1321c426cad81b272a184a775206339289d5c528da66612676611",
-              "bet_mask": "1",
-              "amount": "200000000000000000",
-              "reveal_tx_hash": "0xdb5cf25a11e77dd024f3e20d89eb2a17d0177e777a6aed9658599b2d6cd175eb",
-              "dice_payment": "394000000000000000",
-              "jackpot_payment": "0",
-              "bet_block_hash": "0xca79e81c275796c891441f90b508714932663e8db93391c84cd084d634e7cfce",
-              "bet_block_number": 6150474,
-              "reveal_block_hash": "0x89f0f6661960a620832550a7ac90bd03a9b097a08fb9b84c7fb41249f54188f6"
-            },
-            {
-              "id": 56965,
-              "tx_hash": "0x17e8e87b4e5183a51533acc5f5c2e61ed3a72fe3bff1b6fea7390aa6c328db67",
-              "address_from": "0x702df44ee0baff50f8906fd766d038d74df98769",
-              "modulo": 2,
-              "commit": "0xf806c1b91ce40e0d371b059a5b52f6f3542046a5ad6bb1a34770517ebec41e6e",
-              "reveal": "0x9e412e5820cdfbdfd54dcd914efd2760918852195120bb38e4f82710ed4be067",
-              "bet_mask": "1",
-              "amount": "100000000000000000",
-              "reveal_tx_hash": "0xacee09efb22dbfffa8cae02b788811f9cebd9c6452f761f8c11616ff6e298dfd",
-              "dice_payment": "0",
-              "jackpot_payment": "0",
-              "bet_block_hash": "0x0f2b77500c3ca0cb08295e56ced5b316ab1dcaf357b3c4b980a3f336347a9ccc",
-              "bet_block_number": 6150471,
-              "reveal_block_hash": "0xca79e81c275796c891441f90b508714932663e8db93391c84cd084d634e7cfce"
-            },
-            {
-              "id": 56971,
-              "tx_hash": "0x73493e9719ce0b78c9fbaeb75bdb6b1f1caab73cdb82c774750c74c633788476",
-              "address_from": "0xd1eb49fa03f2a96b642eb9b821345f11879a4f95",
-              "modulo": 2,
-              "commit": "0x3b4e023fd6421be68c95decfeb34ae10df8a29ad7c06296b8baf7d1dd9e3a0a7",
-              "reveal": "0x1b5f5ff06f845b173431d6dcc49409c8b866f60155b2fd4033b800a2359cb713",
-              "bet_mask": "2",
-              "amount": "600000000000000000",
-              "reveal_tx_hash": "0x24c5f382929d675d0b52c699676e98e8c23345d4bf3d263af54377585ea42d5f",
-              "dice_payment": "1186000000000000000",
-              "jackpot_payment": "0",
-              "bet_block_hash": "0x5b9aba5bdd397d6afc2bc04615326c6a02adbf6930b66e285d908cf1c77b04fd",
-              "bet_block_number": 6150477,
-              "reveal_block_hash": "0x72f673b5e7609cc6cde845b5afcb274492065d53f1d91182f3f90f78558a9a94"
             }
           ]
         }
@@ -159,7 +66,7 @@ class GameHistory extends Component {
 
   renderGames(games) {
     return games.map(game =>
-      <div className="row">
+      <div className="history-row">
         <div>
           <p>{game.address_from.substring(0, 8)}</p>
         </div>
@@ -167,10 +74,10 @@ class GameHistory extends Component {
           <p>{(game.amount / 3000000000000000000).toFixed(2)}</p>
         </div>
         <div>
-          <img src={game.bet_mask === "1" ? "./src/images/coin-front.png" : "./src/images/coin-back.png"} width="15" height="15" />
+          <img src={game.bet_mask === "1" ? "./src/App/Images/coin-head.png" : "./src/App/Images/coin-tail.png"} width="15" height="15" />
         </div>
         <div>
-          <img src={game.dice_payment === "0" && game.bet_mask === "1" ? "./src/images/coin-back.png" : "./src/images/coin-front.png"} width="15" height="15" />
+          <img src={game.dice_payment === "0" && game.bet_mask === "1" ? "./src/App/Images/coin-tail.png" : "./src/App/Images/coin-head.png"} width="15" height="15" />
         </div>
         <div>
           <p>{(game.dice_payment / 3000000000000000000).toFixed(2)}</p>
@@ -186,12 +93,12 @@ class GameHistory extends Component {
 
     return (
       <div className="game-history">
-        <h5 className="title">Game History</h5>
-        <div className="caption">
-          <p>Player</p>
-          <p>Bet</p>
+        <p className="title">{I18n.t(k.L_Game_history)}</p>
+        <div className="caption-section">
+          <p>{I18n.t(k.L_Player)}</p>
+          <p>{I18n.t(k.L_Bet)}</p>
           <p></p>
-          <p>Result</p>
+          <p>{I18n.t(k.L_Result)}</p>
           <p></p>
         </div>
         {this.renderGames(this.state.history.games)}

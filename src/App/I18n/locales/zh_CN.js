@@ -26,4 +26,10 @@ export default {
   L_Currency_ETH: "以太币",
   L_Jackpot_chance: "{0}%的赢大奖机会！",
 
+  L_Game_history: "游戏历史",
+  L_Player: "玩家",
+  L_Bet: "赌注",
+  L_Result: "结果",
+  L_Only_me: "只有我",
+
 };
